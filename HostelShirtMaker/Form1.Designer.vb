@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ShirtMakerForm
+Partial Class frmShirtMakerForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,27 +22,32 @@ Partial Class ShirtMakerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ShirtMakerForm))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmShirtMakerForm))
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.lblRoom = New System.Windows.Forms.Label()
+        Me.lblShirtType = New System.Windows.Forms.Label()
+        Me.lblShirtSize = New System.Windows.Forms.Label()
+        Me.lblPartyDate = New System.Windows.Forms.Label()
+        Me.dtpPartyDate = New System.Windows.Forms.DateTimePicker()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtRoom = New System.Windows.Forms.TextBox()
+        Me.cmbShirtType = New System.Windows.Forms.ComboBox()
+        Me.cmbShirtSize = New System.Windows.Forms.ComboBox()
+        Me.btnReset = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.Location = New System.Drawing.Point(266, 410)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 40)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmit.Location = New System.Drawing.Point(256, 298)
+        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(107, 40)
+        Me.btnSubmit.TabIndex = 0
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -54,86 +59,136 @@ Partial Class ShirtMakerForm
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'Label1
+        'lblName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 104)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Label1"
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(15, 123)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(38, 13)
+        Me.lblName.TabIndex = 2
+        Me.lblName.Text = "Name:"
         '
-        'Label2
+        'lblRoom
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 117)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Label2"
+        Me.lblRoom.AutoSize = True
+        Me.lblRoom.Location = New System.Drawing.Point(15, 153)
+        Me.lblRoom.Name = "lblRoom"
+        Me.lblRoom.Size = New System.Drawing.Size(45, 13)
+        Me.lblRoom.TabIndex = 3
+        Me.lblRoom.Text = "Room#:"
         '
-        'Label3
+        'lblShirtType
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 138)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Label3"
+        Me.lblShirtType.AutoSize = True
+        Me.lblShirtType.Location = New System.Drawing.Point(15, 179)
+        Me.lblShirtType.Name = "lblShirtType"
+        Me.lblShirtType.Size = New System.Drawing.Size(58, 13)
+        Me.lblShirtType.TabIndex = 4
+        Me.lblShirtType.Text = "Shirt Type:"
         '
-        'Label4
+        'lblShirtSize
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 155)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Label4"
+        Me.lblShirtSize.AutoSize = True
+        Me.lblShirtSize.Location = New System.Drawing.Point(15, 210)
+        Me.lblShirtSize.Name = "lblShirtSize"
+        Me.lblShirtSize.Size = New System.Drawing.Size(51, 13)
+        Me.lblShirtSize.TabIndex = 5
+        Me.lblShirtSize.Text = "Shirt Size"
         '
-        'Label5
+        'lblPartyDate
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 172)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 13)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Label5"
+        Me.lblPartyDate.AutoSize = True
+        Me.lblPartyDate.Location = New System.Drawing.Point(15, 243)
+        Me.lblPartyDate.Name = "lblPartyDate"
+        Me.lblPartyDate.Size = New System.Drawing.Size(60, 13)
+        Me.lblPartyDate.TabIndex = 6
+        Me.lblPartyDate.Text = "Party Date:"
         '
-        'DateTimePicker1
+        'dtpPartyDate
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(60, 282)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 7
+        Me.dtpPartyDate.Location = New System.Drawing.Point(81, 237)
+        Me.dtpPartyDate.Name = "dtpPartyDate"
+        Me.dtpPartyDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtpPartyDate.TabIndex = 7
         '
-        'ShirtMakerForm
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(79, 120)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(200, 20)
+        Me.txtName.TabIndex = 8
+        '
+        'txtRoom
+        '
+        Me.txtRoom.Location = New System.Drawing.Point(79, 150)
+        Me.txtRoom.Name = "txtRoom"
+        Me.txtRoom.Size = New System.Drawing.Size(200, 20)
+        Me.txtRoom.TabIndex = 9
+        '
+        'cmbShirtType
+        '
+        Me.cmbShirtType.FormattingEnabled = True
+        Me.cmbShirtType.Location = New System.Drawing.Point(79, 176)
+        Me.cmbShirtType.Name = "cmbShirtType"
+        Me.cmbShirtType.Size = New System.Drawing.Size(200, 21)
+        Me.cmbShirtType.TabIndex = 10
+        '
+        'cmbShirtSize
+        '
+        Me.cmbShirtSize.FormattingEnabled = True
+        Me.cmbShirtSize.Location = New System.Drawing.Point(81, 207)
+        Me.cmbShirtSize.Name = "cmbShirtSize"
+        Me.cmbShirtSize.Size = New System.Drawing.Size(200, 21)
+        Me.cmbShirtSize.TabIndex = 11
+        '
+        'btnReset
+        '
+        Me.btnReset.Location = New System.Drawing.Point(18, 298)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(107, 40)
+        Me.btnReset.TabIndex = 12
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'frmShirtMakerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 461)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(384, 363)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.cmbShirtSize)
+        Me.Controls.Add(Me.cmbShirtType)
+        Me.Controls.Add(Me.txtRoom)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.dtpPartyDate)
+        Me.Controls.Add(Me.lblPartyDate)
+        Me.Controls.Add(Me.lblShirtSize)
+        Me.Controls.Add(Me.lblShirtType)
+        Me.Controls.Add(Me.lblRoom)
+        Me.Controls.Add(Me.lblName)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "ShirtMakerForm"
-        Me.Text = "Form1"
+        Me.Name = "frmShirtMakerForm"
+        Me.Text = "Shirt Maker Form"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents lblName As Label
+    Friend WithEvents lblRoom As Label
+    Friend WithEvents lblShirtType As Label
+    Friend WithEvents lblShirtSize As Label
+    Friend WithEvents lblPartyDate As Label
+    Friend WithEvents dtpPartyDate As DateTimePicker
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtRoom As TextBox
+    Friend WithEvents cmbShirtType As ComboBox
+    Friend WithEvents cmbShirtSize As ComboBox
+    Friend WithEvents btnReset As Button
 End Class
