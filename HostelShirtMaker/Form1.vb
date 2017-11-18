@@ -49,13 +49,14 @@
 
 
         If (frmValid) Then
-            Dim fldName = strDate + "_" + strName + "_" + strRoom + "_" + strShirtType + "_" + strShirtSize
+            Dim fldName As String = strDate + "_" + strName + "_" + strRoom + "_" + strShirtType + "_" + strShirtSize
 
             'MsgBox(fldName + " Created")
             resetValues()
             My.Computer.FileSystem.CreateDirectory(dirName + fldName)
         Else
             Dim errorToString As String = ""
+            Dim bad As String
             For Each bad In badList
                 errorToString = errorToString + Environment.NewLine + "- " + bad
             Next
