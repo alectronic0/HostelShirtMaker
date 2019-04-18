@@ -8,6 +8,22 @@ It make shirts...kind of
 Code Built for Asylum Hostel Cairns to help organise there Tshirt Creation stuff...
 Its a Simple VB Application.
 
+## Original Requirement Brief
+Nothing big. Should take someone who knows what they're doing less than 30minutes. I've seen how to do the basic folder creation, it would just be a few form fields.
+
+It's to make the folders for the hostel shirts. I need a program that creates a folder (in the same directory of the program, wherever it is), and names it with form data input.
+
+The form fields would be:
+Party Date (yyyymmdd):
+Name:
+Room#:
+Shirt type: (drop-down menu options: Singlet | T-Shirt |
+Shirt size: (drop-down menu: XXS | XS | S | M | L | XL | XXL |
+
+Output to folder name would be "<PartyDate> <Name> <Room> <ShirtType> <Size>"
+
+example: "20170412 Joe #21 Singlet M"
+
 ## Quickstart
 - Need to be run on a computer with Windows & Visual Studios 
 - First Git Clone the repo
